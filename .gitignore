@@ -1,0 +1,8 @@
+.htaccess
+.ftpquota
+cgi-bin/*
+.well-known/*
+.vscode
+robots.txt
+sitemap.xml
+google5f26c6e97e315f93.html

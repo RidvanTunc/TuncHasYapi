@@ -1,0 +1,142 @@
+.icerik-proje-detayi {
+  padding: 70px 0 0 0;
+}
+
+.projeDetaylari {
+  padding: 3px 10px 25px 10px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.IstanbulHavaLimani {
+  background: url("../img/Istanbul-Havalimani.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.SabihaGokcenHavaLimani {
+  background: url("../img/Sabiha-Gokcen-Havalimani.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.MilasBodrumHavaLimani {
+  background: url("../img/Milas-Bodrum-Havalimani.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.TeknoParkIstanbul {
+  background: url("../img/Tekno-Park-Istanbul.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.KaynarcaSporKompleksi {
+  background: url("../img/Kaynarca-Spor-Kompleksi.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.projeDetaylari h1 {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color: gold;
+}
+
+.sayfa-proje-detayi {
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border-top: 1px solid darkgoldenrod;
+  border-right: 1px solid darkgoldenrod;
+  border-left: 1px solid darkgoldenrod;
+  border-radius: 10px 10px 0 0;
+  /*background: url(../img/sayfa.jpg) no-repeat center;
+  background-size: 100% 100%; */
+  opacity: .9;
+  background: #fff;
+}
+
+.sayfa-proje-detayi p {
+  font-size: large;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #0076c0;
+}
+
+.calismalar {
+  padding: 15px 20px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 2;
+  border-bottom: 1px solid darkgoldenrod;
+  border-right: 1px solid darkgoldenrod;
+  border-left: 1px solid darkgoldenrod;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  background: rgb(255, 255, 255, .9);
+  color: #0076c0;
+}
+
+.calismalar li {
+  border-bottom: 1.9px solid #aaa;
+  list-style-type: disc;
+}
+
+.sekmeler {
+  display: flex;
+  width: 19%;
+  margin: 20px auto 0 auto;
+}
+
+.sekmeler .git {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background: rgb(255, 255, 255, .8);
+}
+
+.sekmeler .git a {
+  padding: 5px;
+  font-weight: 400;
+  color: #000;
+}
+
+.sekmeler .aktif2 {
+  width: 18px;
+  height: 18px;
+  background: rgb(184, 134, 11, .9);
+  opacity: .8;
+  border: 1px solid #fff;
+}
+
+.sekmeler .aktif2 a {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+@media screen and (max-width:748px) {
+  .icerik-proje-detayi {
+      padding: 60px 0 0 0;
+  }
+  .projeDetaylari h1 {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+  }
+  .calismalar {
+      font-size: 14px;
+  }
+  .sayfa-proje-detayi p {
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: #0076c0;
+  }
+  .sekmeler {
+      width: 70%;
+  }
+}

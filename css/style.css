@@ -1,0 +1,1007 @@
+@import url("kurumsal.css");
+@import url("projeler.css");
+@import url("iletisim.css");
+@import url("proje-detayi.css");
+@import url("fancybox-3.5.7-jquery.min.css");
+@import url("bootstrap-4.6.1.min.css");
+body {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    font-family: arial narrow, arial;
+    text-rendering: auto;
+    background: #f8f9fb;
+    user-select: none;
+}
+img {
+    image-rendering: auto;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.icerik {
+    padding: 70px 0 40px 0;
+}
+.google {
+    display: none;
+    visibility: hidden;
+}
+/*****************************************************************Header Navbar*******************************************/
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    z-index: 2;
+    background: rgb(255, 255, 255, .7);
+}
+.anaLogo img {
+    position: absolute;
+    top: 7.5px;
+    left: 5%;
+    transition: .5s ease;
+    animation: anaLogo 1s ease;
+}
+.anaLogo img:hover {
+    top: 5;
+    transform: translate(0,0) scale(1.1) rotate(0);
+}
+@keyframes anaLogo {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 7.5px;
+    }
+}
+.ustIletisim {
+    position: absolute;
+    left: 21%;
+    top: 35%;
+}
+.ustIletisim a {
+    letter-spacing: 1px;
+    color: #005fbf;
+    transition: .3s ease;
+}
+.ustIletisim .fab {
+    font-size: 18px;
+    color: #005fbf;
+    transition: .3s ease;
+}
+.ustIletisim a:hover,
+.ustIletisim .fab:hover {
+    color: darkgoldenrod;
+}
+.anaLinkler {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    top: 8.5px;
+    animation: anaLinkler 1s ease;
+}
+@keyframes anaLinkler {
+    0% {
+        top: 60px;
+        opacity: 0;
+    }
+    100% {
+        top: 8.5px;
+        opacity: 1;
+    }
+}
+.anaLinkler li a {
+    /*padding: 18px 15px;
+    border-radius: 10px;*/
+    padding: 23px 15px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #005fbf;
+}
+.anaLinkler li a:hover {
+    color: darkgoldenrod;
+}
+.slaytLink {
+    position: absolute;
+    left: 0;
+    top: -15px;
+    height: 50px;
+    z-index: -1;
+    background: rgb(0, 95, 191, .5);
+    border-radius: 10px;
+    transition: all .1s ease;
+    animation: slaytLink 1s ease;
+}
+@keyframes slaytLink {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: -15px;
+        opacity: 1;
+    }
+}
+.anaLinkler .aktifLink a {
+    color: #fff;
+}
+.anaLinkler .link:nth-child(1).aktifLink ~ .slaytLink {
+    left: 9%;
+    width: 92px;
+}
+.anaLinkler .link:nth-child(2).aktifLink ~ .slaytLink {
+    left: 32%;
+    width: 100px;
+}
+.anaLinkler .link:nth-child(3).aktifLink ~ .slaytLink {
+    left: 58.3%;
+    width: 89px;
+}
+.anaLinkler .link:nth-child(4).aktifLink ~ .slaytLink {
+    left: 81.5%;
+    width: 80px;
+}
+.anaLinkler .ac {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.anaLinkler .kurumsal {
+    position: absolute;
+    top: 44px;
+    left: 22.8%;
+}
+.anaLinkler .kurumsal .link2 {
+    display: none;
+    position: relative;
+    top: 1px;
+    padding: 17.5px 0;
+    border-bottom: 1px solid darkgoldenrod;
+    border-right: 1px solid darkgoldenrod;
+    border-left: 1px solid darkgoldenrod;
+    background: rgb(235, 240, 255, .7);
+    animation: link2 .3s ease-in-out;
+}
+@keyframes link2 {
+    0% {
+        top: 25px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+.anaLinkler .kurumsal .link2 a {
+    position: relative;
+    z-index: 1;
+    color: #005fbf;
+}
+.anaLinkler .kurumsal .link2 a:hover {
+    color: darkgoldenrod;
+}
+.anaLinkler .kurumsal .pasifLink a {
+    color: #fff;
+}
+.slaytLink2 {
+    display: none;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 109px;
+    height: 53px;
+    opacity: 0;
+    background: rgb(0, 95, 191, .5);
+    transition: .1s linear;
+}
+.anaLinkler .link2:nth-child(1).pasifLink~.slaytLink2 {
+    top: 1.5px;
+    width: 71%;
+    opacity: 1;
+}
+.anaLinkler .link2:nth-child(2).pasifLink~.slaytLink2 {
+    top: 55px;
+    width: 106px;
+    opacity: 1;
+}
+.anaLinkler .ac3 {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.anaLinkler .projeler {
+    position: absolute;
+    top: 44px;
+    left: 48%;
+}
+.anaLinkler .projeler .link3 {
+    display: none;
+    position: relative;
+    top: 1px;
+    padding: 17.5px 0;
+    border-bottom: 1px solid darkgoldenrod;
+    border-right: 1px solid darkgoldenrod;
+    border-left: 1px solid darkgoldenrod;
+    background: rgb(235, 240, 255, .7);
+    animation: link3 .3s ease-in-out;
+}
+@keyframes link3 {
+    0% {
+        top: 25px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+.anaLinkler .projeler .link3 a {
+    position: relative;
+    z-index: 1;
+    color: #005fbf;
+}
+.anaLinkler .projeler .link3 a:hover {
+    color: darkgoldenrod;
+}
+.anaLinkler .projeler .pasifLink2 a {
+    color: #fff;
+}
+.slaytLink3 {
+    display: none;
+    position: absolute;
+    top: -60px;
+    left: 18.5%;
+    width: 109px;
+    height: 53px;
+    opacity: 0;
+    background: rgb(0, 95, 191, .5);
+    transition: .1s linear;
+}
+.anaLinkler .link3:nth-child(1).pasifLink2~.slaytLink3 {
+    top: 1.5px;
+    width: 178px;
+    opacity: 1;
+}
+.anaLinkler .link3:nth-child(2).pasifLink2~.slaytLink3 {
+    top: 55px;
+    width: 178px;
+    opacity: 1;
+}
+.anaLinkler .link3:nth-child(3).pasifLink2~.slaytLink3 {
+    top: 109px;
+    width: 178px;
+    opacity: 1;
+}
+/********************************************************************Slayt************************************************/
+.anaResimKutusu {
+    position: relative;
+    width: 100%;
+    background: rgb(235, 240, 255);
+}
+.slaytKutusu img {
+    width: 100%;
+    height: 580px;
+    animation: slaytla .9s ease;
+    filter: brightness(85%);
+}
+
+@keyframes slaytla {
+    0% {
+        object-position: 0 500px;
+    }
+    50% {
+        object-position: 0;
+    }
+}
+.geriSlayt,
+.ileriSlayt {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 255, 255, .7);
+    cursor: pointer;
+    user-select: none;
+    transition: .3s ease;
+}
+.ileriSlayt {
+    right: 0;
+}
+.geriSlayt {
+    left: 0;
+}
+.geriSlayt:hover,
+.ileriSlayt:hover {
+    color: darkgoldenrod;
+}
+.yaziSlayti,
+.projeDetayi a {
+    position: absolute;
+    padding: 10px;
+    z-index: 1;
+    font-weight: inherit;
+    letter-spacing: 2px;
+    border-radius: 0 5px 5px 0;
+    background: rgb(184, 134, 11);
+    color: #f5f5f5;
+}
+.yaziSlayti {
+    top: 335px;
+    font-size: 18px;
+    animation: yazi .9s ease;
+}
+.projeDetayi a {
+    top: 380px;
+    left: 0;
+    font-size: 14px;
+    animation: detay 2s ease-out;
+}
+@keyframes yazi {
+    0% {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes detay {
+    0% {
+        top: 335px;
+        opacity: 0;
+    }
+    50% {
+        top: 335px;
+        opacity: 0;
+    }
+    100% {
+        top: 380px;
+        opacity: 1;
+    }
+}
+.resimNumarasi {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 50px 0 0 0;
+    background: rgb(184, 134, 11);
+    color: #fff;
+    animation: numara .9s ease;
+}
+@keyframes numara {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.anaAktifResimKutusu {
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    padding: 50px 0;
+    overflow: auto;
+}
+.aktifSecici {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    width: 35%;
+    margin: 4px auto;
+}
+.aktifResim,
+.aktifResim img {
+    border-radius: 300px;
+    box-shadow: 0px 0 15px #000;
+    filter: brightness(95%);
+}
+.aktifResim {
+    height: 70px;
+    margin: 0 10px 0 0;
+}
+.aktif,
+.aktifResim {
+    cursor: pointer;
+    background: url("../img/FaviconLogo.png") no-repeat center center;
+    background-size: 80px 80px;
+    transition: .9s ease;
+}
+.aktif,
+.aktifResim img:hover {
+    /*object-position: 0 -100px;*/
+    height: 70px;
+    width: 100px;
+    opacity: .5;
+    box-shadow: 0px 0 15px #fff;
+}
+/***********************************************************Tunçhas Yapı Hakkında*****************************************/
+.TuncHasYapi {
+    width: 80%;
+    margin: 22px auto 0px auto;
+}
+.TuncHasYapi .icerikYazi {
+    width: 70%;
+    margin: -50px auto 0 auto;
+}
+.TuncHasYapi img {
+    margin: 0 0 4px 0;
+}
+.TuncHasYapi .baslik h1 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: darkgoldenrod;
+}
+.TuncHasYapi .yazi p {
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+}
+.TuncHasYapi .btn {
+  padding: .300rem .50rem;
+}
+.TuncHasYapi .yazi a {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: black;
+}
+.TuncHasYapi a:hover{
+  color: white;
+}
+.TuncHasYapi a:hover span {
+  display: none;
+}
+.TuncHasYapi a i {
+  display: none;
+}
+.TuncHasYapi a:hover i {
+  display: inline;
+}
+/********************************************************************Footer**********************************************/
+footer {
+    width: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    background: url(../img/footer.png) no-repeat center;
+    background-size: 100%;
+    box-shadow: 0 -5px 20px #006000;
+}
+.footerIletisim {
+    display: flex;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 3px 0 0 17.5%;
+    box-sizing: border-box;
+}
+.altIletisimler1,
+.altIletisimler2,
+.altIletisimler3 {
+    width: 30%;
+    margin: 0 auto;
+}
+.altIletisimler1 .bosluk,
+.altIletisimler1 .bosluk3 {
+    display: none;
+}
+.altIletisimler1 .bosluk2 {
+    display: inherit;
+}
+.altIletisimler2 {
+    margin: 0 auto;
+    padding: 0 0 0 7%;
+}
+.altIletisim h3 {
+    padding: 10px 0 0 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    color: #006000;
+}
+.altIletisim a {
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 2;
+    color: #000;
+    transition: .1s ease;
+}
+.footerIletisim .fas,
+.footerIletisim .fab {
+    font-size: 14px;
+    line-height: 2;
+    color: #006000;
+}
+.altLinkAc,
+.altLinkAc2 {
+    cursor: pointer;
+}
+.kurumsalAltLink,
+.projelerAltLink {
+    margin: 0 0 0 45px;
+    display: none;
+}
+.haritaFormDugme {
+    width: 100%;
+    margin: 30px auto;
+    letter-spacing: .5px;
+}
+.haritaFormDugme i {
+    font-size: 17.5px;
+    color: #fff;
+}
+.formDugme i {
+    font-size: 13px;
+    margin-left: 10px;
+}
+.haritaDugme,
+.formDugme {
+    width: 60%;
+    margin: 2px auto 0 auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 14.70px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #008000;
+    color: #fff;
+}
+.googleHarita,
+.iletisimFormu {
+    width: 61%;
+    height: 300px;
+    display: none;
+    margin: 0 auto 0 19.5%;
+}
+.googleHarita iframe,
+.iletisimFormu form {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.iletisimFormu form {
+    padding: 7px 0 0 0;
+    background: #f8f9fb;
+}
+.iletisimFormu fieldset {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 0 0 0;
+    border: none;
+}
+.iletisimFormu input,
+.iletisimFormu textarea {
+    width: 95%;
+    padding: 7px;
+    border: 1px solid #aaa;
+    transition: .3s ease;
+}
+.iletisimFormu input:hover,
+.iletisimFormu textarea:hover {
+    border: 1px solid #474747;
+}
+.iletisimFormu textarea {
+    height: 70px;
+    resize: none;
+}
+.iletisimFormu button {
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #009000;
+    color: #fff;
+    transition: .3s ease;
+}
+.iletisimFormu button:hover {
+    border: 1px solid #aaa;
+    color: #ccc;
+}
+.telif {
+    margin: 0;
+    padding: 1px 3px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: #fff;
+    color: #0076c0;
+}
+.telif h4 {
+    font-weight: 500;
+}
+/*****************************************************RESPONSİVE PHONE TABLET LAPTOP************************************/
+/*****************************************************RESPONSİVE PHONE TABLET LAPTOP************************************/
+@media screen and (max-width: 1250px) {
+    .ustIletisim {
+        left: 18%
+    }
+}
+@media screen and (max-width:1200px) {
+    /************************Üst İletişim*******************************/
+    .ustIletisim {
+        left: 30%;
+    }
+    .ustIletisim .kaybet {
+        display: none;
+    }
+    /***************************Slayt***********************************/
+    .aktifSecici {
+        width: 50%;
+    }
+    /***************************Footer**********************************/
+    footer {
+        background: url(../img/footer.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .altIletisimler1 .bosluk,
+    .altIletisimler1 .bosluk2,
+    .altIletisimler1 .bosluk3 {
+        display: none;
+    }
+}
+@media screen and (max-width: 835px) {
+    .ustIletisim {
+        left: 26.5%
+    }
+}
+@media screen and (max-width: 485px) {
+    .ustIletisim {
+        display: none;
+    }
+}
+@media screen and (max-width:768px) {
+    .icerik {
+        padding: 70px 0 15px 0;
+    }
+    /***************************Header Navbar*******************************/
+    .header_navbar {
+        height: 60px;
+    }
+    .anaLogo img {
+        left: 40px;
+    }
+    .ustIletisim {
+        left: 45%;
+    }
+    .anaLinkler {
+        position: fixed;
+        top: 54px;
+        right: -2%;
+        width: 100%;
+        height: 61px;
+        transform: translateX(100%);
+        background: rgb(235, 240, 255, .7);
+        transition: all .3s linear;
+    }
+    .cizgiler {
+        display: block;
+        position: absolute;
+        bottom: 19px;
+        right: 40px;
+        cursor: pointer;
+        animation: cizgiler 1s linear;
+    }
+    @keyframes cizgiler {
+        0% {
+            right: -100px;
+        }
+        100% {
+            right: 40px;
+        }
+    }
+    .cizgiler .cizgi1,
+    .cizgiler .cizgi2,
+    .cizgiler .cizgi3 {
+        width: 30px;
+        height: 3px;
+        border-radius: 15px;
+        background: #0076c0;
+        transition: all .3s linear;
+    }
+    .cizgiler .cizgi2 {
+        margin: 4px 0;
+    }
+    .getirLink {
+        transform: translateX(0);
+    }
+    @keyframes yaziAnimLink {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            margin: 20px 0 0 0;
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    .anaLinkler .animLink {
+        opacity: 0;
+    }
+    .anaLinkler li a {
+        padding: 23px 9px;
+        letter-spacing: 1px;
+        color: #000;
+      }
+      .anaLinkler .aktifLink a {
+        color: #005fbf;
+      }
+      .anaLinkler .aktifLink2 {
+        background: rgb(249, 249, 249, .7);
+      }
+    .slaytLink {
+        display: none;
+    }
+    .anaLinkler .ac {
+        top: -.5px;
+        padding: 23px 11px;
+    }
+    .anaLinkler .kurumsal {
+        top: 21px;
+        left: -39%;
+    }
+    .anaLinkler .kurumsal .link2 {
+        top: 20.1px;
+        left: -2.6px;
+        background: rgb(235, 240, 255, .7);
+    }
+    @keyframes link2 {
+        0% {
+            top: 50px;
+        }
+        100% {
+            top: 20.1px;
+        }
+    }    
+    .anaLinkler .kurumsal .link2 a {
+        color: #000;
+        padding: 23px 12.5px;
+    }
+    .anaLinkler .kurumsal .pasifLink a {
+        color: #005fbf;
+    }
+    .slaytLink2 {
+        top: -41px;
+        left: 28.2%;
+        width: 114px;
+        height: 53x;
+        background: rgb(249, 249, 249, .7);
+    }
+    .anaLinkler .link2:nth-child(1).pasifLink~.slaytLink2 {
+        top: 20px;
+        left: 38px;
+    }
+    .anaLinkler .link2:nth-child(2).pasifLink~.slaytLink2 {
+        top: 75px;
+        left: 38px;
+        width: 103px;
+    }
+    .anaLinkler .projeler .link3 {
+        width: 165px;
+        top: -2.9px;
+        left: -83px;
+    }
+    .anaLinkler .projeler .link3 a {
+        color: #000;
+    }
+    .anaLinkler .projeler .pasifLink2 a {
+        color: #005fbf;
+    }
+    .slaytLink3 {
+        top: -41px;
+        left: -32%;
+        width: 94.5px;
+        height: 53px;
+        background: rgb(249, 249, 249, .7);
+    }
+    .anaLinkler .link3:nth-child(1).pasifLink2~.slaytLink3 {
+        top: -3px;
+        left: -42px;
+        width: 165px;
+    }
+    .anaLinkler .link3:nth-child(2).pasifLink2~.slaytLink3 {
+        top: 52px;
+        left: -42px;
+        width: 165px;
+    }
+    .anaLinkler .link3:nth-child(3).pasifLink2~.slaytLink3 {
+        top: 107px;
+        left: -42px;
+        width: 165px;
+    }
+    .kapat .cizgi1 {
+        transform: rotate(-45deg) translate(-5px, 4px);
+        transition: all .3s linear;
+    }
+    .kapat .cizgi2 {
+        opacity: 0;
+    }
+    .kapat .cizgi3 {
+        transform: rotate(45deg) translate(-5px, -4px);
+        transition: all .3s linear;
+    }
+    /*********************************Slayt**********************************/
+    .anaResimKutusu,
+    .slaytKutusu,
+    .slaytKutusu img {
+        height: 300px;
+    }
+    .geriSlayt,
+    .ileriSlayt {
+        width: 70px;
+        font-size: 15px;
+        /*background: rgb(184, 134, 11, .3);*/
+    }
+    .yaziSlayti,
+    .projeDetayi a {
+        font-size: 10px;
+        line-height: 1px;
+        background: rgb(184, 134, 11);
+    }
+    .yaziSlayti {
+        top: 175px;
+        padding: 15px 8px;
+        font-weight: 500;
+    }
+    .projeDetayi a {
+        top: 210px;
+        padding: 10px 8px;
+    }
+    @keyframes detay {
+        0% {
+            top: 175px;
+            opacity: 0;
+        }
+        50% {
+            top: 175px;
+            opacity: 0;
+        }
+        100% {
+            top: 210px;
+            opacity: 1;
+        }
+    }
+    .resimNumarasi {
+        bottom: 0;
+        font-size: 10px;
+        font-weight: 300;
+    }
+    .anaAktifResimKutusu {
+        position: absolute;
+        bottom: -95px;
+        width: 100%;
+        padding: 50px 0;
+        overflow: auto;
+    }
+    .aktifSecici {
+        display: flex;
+        justify-content: center;
+        height: 70px;
+        width: 35%;
+        margin: 4px auto;
+    }
+    .aktifResim,
+    .aktifResim img {
+        height: 50px;
+        width: 50px;
+        border-radius: 300px;
+        box-shadow: 0px 0 15px #000;
+        filter: brightness(95%);
+    }
+    .aktifResim {
+        margin: 0 10px 0 0;
+    }
+    
+    .aktif,
+    .aktifResim {
+        background: url("../img/FaviconLogo.png") no-repeat center center;
+        background-size: 50px 50px;
+        transition: .9s ease;
+    }
+    .aktif,
+    .aktifResim img:hover {
+        height: 50px;
+        width: 50px;
+        opacity: .5;
+        box-shadow: 0px 0 15px #fff;
+    }
+    /**********************Tunçhas Yapı Hakkımızda*********************/
+    .TuncHasYapi {
+        width: 90%;
+        margin: 30px auto 15px auto;
+    }
+    .TuncHasYapi .icerikYazi {
+        width: 80%;
+    }
+    .TuncHasYapi img {
+        height: 250px;
+        margin: 0 0 20px 0;
+        /*object-position: 0 -45px;*/
+    }
+    .TuncHasYapi .baslik h1 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 30px auto 0 auto;
+        line-height: .5;
+    }
+    .TuncHasYapi .yazi p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: .5px;
+    }
+    .TuncHasYapi .btn {
+      padding: .250rem .45rem;
+    }
+    .TuncHasYapi .yazi a {
+      font-size: 14px;
+      font-weight: 300;
+    }
+    .TuncHasYapi .yazi a:hover {
+      font-weight: 400;
+    }
+    /***********************************Footer*******************************/
+    footer {
+        background: url(../img/footer.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .footerIletisim {
+        display: block;
+        padding: 3px 0 0 5%;
+    }
+    .altIletisimler1,
+    .altIletisimler2,
+    .altIletisimler3 {
+        width: 80%;
+        margin: 0 0 0 3px;
+    }
+    .altIletisimler2 {
+        padding: 0;
+    }
+    .altIletisim h3 {
+        padding: 15px 0 3px 0;
+    }
+    .altIletisim a {
+        font-weight: 400;
+        line-height: 2;
+    }
+    .footerIletisim .fas,
+    .footerIletisim .fab {
+        font-size: 12px;
+    }
+    .haritaFormDugme {
+        width: 100%;
+        margin: 28px auto 33px auto;
+    }
+    .haritaDugme,
+    .formDugme {
+        width: 85%;
+    }
+    .googleHarita,
+    .iletisimFormu {
+        width: 90%;
+        margin: 0 auto 0 5%;
+    }
+    .googleHarita iframe,
+    .iletisimFormu form {
+        width: 100%;
+    }
+    .telif h4 {
+        font-size: 9px;
+    }
+}

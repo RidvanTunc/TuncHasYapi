@@ -1,0 +1,156 @@
+/*******************************************************SAYFA BAŞLIĞI*****************************************************/
+.projects .icerik {
+  padding: 70px 0 20px 0;
+}
+.main-image {
+  width: 100%;
+  height: 105px;
+}
+.main-image img {
+  border-radius: 0 0 100% 100%;
+  box-shadow: 0 10px 10px 5px rgb(0, 0, 0, .5);
+}
+.page-head {
+  position: absolute;
+  top: 85px;
+  left: 35px;
+  color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: .5px;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0, .5);
+}
+/*******************************************************PROJE TANITIMI RESİMLİ********************************************/
+.class-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project-detail {
+  position: relative;
+  width: 50%;
+  margin: 10px 5px 0 0;
+  display: flex;
+  box-shadow: 0px 0px 20px 5px rgb(0, 0, 0, .3);
+}
+.detail-img {
+  background-color: #000;
+  padding: 0;
+  width: 100%;
+}
+.detail-img img {
+  width: 100%;
+  height: 350px;
+  opacity: .5;
+}
+.detail-text {
+  position: absolute;
+  left: 20px;
+  color: #fff;
+  margin-top: -15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Times, serif;
+}
+.detail-text h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.detail-text li {
+  list-style-type: disc;
+  line-height: 1.5;
+  font-size: 18px;
+}
+/********************************************************DUVAR VE PEYZAJ İŞLERİ********************++++*******************/
+.container-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  padding-bottom: 15px;
+  margin: auto;
+}
+.container-row .item {
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: #000;
+}
+.container-row .item img {
+  width: 250px;
+  height: 200px;
+  box-shadow: 0 0 25px 1px rgba(0, 0, 0, .3);
+  transition: .5s ease;
+}
+.container-row .item:hover img {
+  transform: translate(0, 0) scale(1.2) rotate(0deg);
+  opacity: .7;
+}
+.container-row .item .zoom-icon {
+  position: absolute;
+  opacity: 0;
+  color: #fff;
+  transform: translate(220%,-265%);
+  transition: all .5s ease-in-out;
+}
+.container-row .item:hover .zoom-icon {
+  opacity: .5;
+}
+/**************************************************************RESPONSİVE*************************************************/
+/**************************************************************RESPONSİVE*************************************************/
+@media screen and (max-width: 1238px) {
+  .project-detail {
+    width: 70%;
+    margin: 5px 0 0 0;
+  }
+}
+@media screen and (max-width: 950px) {
+  .project-detail {
+    width: 70%;
+    margin: 5px 0 0 0;
+  }
+  .detail-img {
+    width: 100%;
+  }
+  .detail-img img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 874px) {
+  .main-image {
+    width: 100%;
+    height: 135px;
+  }
+  .main-image img {
+    height: 125px;
+    border-radius: 0 0 15% 15%;
+    filter: brightness(90%);
+  }
+  .page-head {
+    top: 93px;
+  }
+  .project-detail {
+    width: 100%;
+  }
+  .detail-text li {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+@media screen and (max-width: 530px) {
+  .page-head {
+    font-size: 18px;
+    left: 20px;
+  }
+  .detail-text {
+    left: 5px;
+  }
+  .detail-text h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .detail-text li {
+    font-size: 15px;
+  }
+}

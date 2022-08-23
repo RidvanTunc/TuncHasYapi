@@ -1,0 +1,194 @@
+/**************************************************************GOOGLE MAP*************************************************/
+.google-map {
+  position: relative;
+  border: 0;
+}
+.harita-konum img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/****************************************************************MAİN BOX*************************************************/
+.main-box {
+  width: 100%;
+  margin-top: 30px;
+}
+.main-box-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+/***************************************************************İNFO İCON*************************************************/
+.main-box-info {
+  margin: 70px 40px 0 50px;
+}
+.main-box-info img {
+  margin-top: 10px;
+  width: 60px;
+  height: 60px;
+}
+.main-box-info a:hover img {
+  animation: icon .1s ease infinite;
+}
+@keyframes icon {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(10deg);
+  }
+}
+/*******************************************************************FORM**************************************************/
+.main-box-form {
+  width: 40%;
+}
+.form_box {
+  padding: 10px 25px 25px 25px;
+  border: solid 1px #666;
+  Border-radius: 10px;
+}
+.form_box h1 {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: .5px;
+  color: #03a9f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.input_box {
+  position: relative;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+.input_box input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: solid 1px #555;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .5px;
+  background-color: #f8f9fb;
+}
+.input_box label {
+  position: absolute;
+  left: 15px;
+  top: 16px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: .5px;
+  pointer-events: none;
+  background-color: #f8f9fb;
+  color: #555;
+  transition: .2s;
+}
+.input_box textarea {
+  width: 100%;
+  padding: 10px;
+  border: solid 1px #999;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 500;                    
+  letter-spacing: .5px;
+  background-color: #f8f9fb;
+}
+.input_box input:focus ~ label,
+.input_box input:valid ~ label,
+.input_box textarea:focus ~ label,
+.input_box textarea:valid ~ label {
+  top: -5.5px;
+  font-weight: 500;
+  color: #03a9f4;
+}
+.button-box {
+  width: 96%;
+  display: flex;
+  margin: 15px auto 0 auto;
+  justify-content: start;
+}
+.button-box .btn {
+  width: 50%;
+}
+.button-two {
+  margin-left: 25px;
+}
+.form_box .btn i {
+  display: none;
+  margin-left: 0;
+  animation: button .3s ease;
+}
+@keyframes button {
+  from {
+    margin-left: -20px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+.form_box .btn:hover i {
+  display: inline;
+}
+/***********************************************************RESPOSİVE PHONE TABLET****************************************/
+/***********************************************************RESPOSİVE PHONE TABLET****************************************/
+@media screen and (max-width: 900px) {
+  .main-box-info {
+    margin: 67px 40px 0 30px;
+  }  
+  .main-box-form {
+    width: 50%;
+  }
+  @media screen and (max-width: 670px) {
+    .main-box-info {
+      margin: 67px 15px 0 5px;
+    }  
+    .main-box-form {
+      width: 75%;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .main-box-info {
+      margin: 70px 13px 0 3px;
+    }
+    .main-box-info img {
+      margin-top: 15px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .form_box {
+    padding: 10px 15px 15px 15px;
+    border: solid 1px #666;
+    Border-radius: 10px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .main-box-info {
+    margin: 67px 10px 0 0;
+  }  
+  .main-box-form {
+    width: 80%;
+  }
+  .form_box {
+    padding: 10px;
+    border: solid 1px #666;
+    Border-radius: 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .main-box-info,
+  .form_box .btn:hover i {
+    display: none;
+  }  
+  .main-box-form {
+    width: 95%;
+  }
+}

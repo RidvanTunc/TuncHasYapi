@@ -1,0 +1,94 @@
+/*************************************************************İÇERİK DOLGU************************************************/
+.kurumsal-hakkimizda .icerik {
+  padding: 90px 0 0 0;
+}
+.kurumsal-belgeler .icerik {
+  padding: 70px 0 15px 0;
+}
+/***************************************************AÇILIR MENU KURUMSAL EK AYAR******************************************/
+.anaLinkler .ac2 {
+  padding: 22.5px 15px;
+  cursor: pointer;
+}
+.anaLinkler .kurumsal .link2 {
+  top: 1px;
+  left: -2.6px;
+}
+.anaLinkler .kurumsal .slaytLink2 {
+  left: 26%;
+}
+/*************************************************************HAKKIMIZDA**************************************************/
+.hakkimizdaResim img {
+  height: 550px;
+}
+.hakkimizdaYazi {
+  width: 70%;
+  margin: 12px auto 0 auto;
+}
+.hakkimizdaYazi .baslik h1 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 25px;
+  color: #0076c0;
+}
+.hakkimizdaYazi .yazi p {
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+/********************************************************BELGELER*********************************************************/
+.belgeler {
+  display: grid;
+  place-items: center;
+  width: 70%;
+  margin: 15px auto;
+}
+/********************************************************RESPONSİVE*******************************************************/
+/********************************************************RESPONSİVE*******************************************************/
+@media screen and (max-width:748px) {
+  /******************************İÇERİK DOLGU******************************/
+  .kurumsal-belgeler .icerik {
+      padding: 90px 0 25px 0;
+  }
+  /***************************KURUMSAL MENU EK AYAR******************************/
+  .anaLinkler .ac2 {
+      position: relative;
+      top: -.5px;
+      padding: 23px 11px;
+  }
+  .anaLinkler .kurumsal .link2 {
+      top: 20px;
+      left: -.8%;
+  }
+  .anaLinkler .kurumsal .slaytLink2 {
+      left: 27.7%;
+  }
+   /**********************************HAKKIMIZDA******************************/
+  .hakkimizdaResim img {
+      height: 250px;
+      /*object-position: 0 -72px;*/
+  }
+  .hakkimizdaYazi {
+      width: 80%;
+      margin: 16px auto 0 auto;
+  }
+  .hakkimizdaYazi .baslik h1 {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 10px;
+  }
+  .hakkimizdaYazi .yazi p {
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: .5px;
+  }
+   /**********************************BELGELER******************************/
+  .belgeler {
+      width: 90%;
+      margin: auto;
+  }
+  .belgeler img {
+      width: 100%;
+  }
+}
